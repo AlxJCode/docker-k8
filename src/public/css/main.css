@@ -1,0 +1,899 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    background: linear-gradient(90deg, #1d1d1d , #0e0e0e );
+    height: 100%;
+}
+/*-------------------------Index Style-----------------------*/
+.logo-container{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Handlee', cursive;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.logo-title {
+    display: flex;
+    align-items: center;
+
+}
+.logo-title h1{
+    font-size: 90px;
+}
+.logo-title i{
+    font-size: 70px;
+    padding: 0 30px;
+}
+.logo-btn{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+.logo-btn a{
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    text-decoration: none;
+    color: #b6db11;
+    border: 3px solid #b6db11;
+    font-size: 28px;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 20px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    transition: all .5s ease; 
+    overflow: hidden;
+    z-index: 0;   
+}
+.logo-btn a:hover{
+    color: #222222;
+}
+.logo-btn a span {
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 0px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #b6db11;
+    transition: all .5s;
+    z-index: -1;
+}
+.logo-btn a:hover span{
+    width: 500px;
+    height: 500px;
+}
+/*----------------------Start Style------------------------*/
+
+.start-container {
+    
+    display: flex;
+    justify-content: center;
+    font-family: 'Handlee', cursive;
+}
+.start{
+    width: 65%;
+    min-height: 100vh;
+    background: #fff;
+}
+/*--------------------Start Title--------------------------*/
+.start-title{
+    width: 100%;
+    background:#fff;
+}
+.start-title .title{
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+/*--------------------Start Video--------------------------*/
+.start-video {
+    height: 450px;
+}
+.marco-video {
+    background: #000;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+}
+.gif {
+    width: 100%;
+    display: flex;
+}
+.marco-video .gif img {
+    width: 50%;
+    height: 100%;
+}
+.marco-video .videoYoutube {
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+/*--------------------Start Barras--------------------------*/
+.controls-barras {
+    width: 100%;
+    height: 60px;
+    display: flex;
+}
+.controls-barras button{
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-family: 'Handlee', cursive;
+    background: #ffffff;
+    color: #000;
+    font-size: 30px;
+    cursor: pointer;
+}
+.controls-barras .btn-selected{
+    color: #b6db11;
+    font-weight: 600;
+}
+
+.controls-main {
+    background: #fff;
+}
+/*--------------------Start Inicio--------------------------*/
+.container-inicio{
+    display: block;
+}
+.all-container{
+    padding: 20px;
+}
+.all-container h3{
+    font-size: 23px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #000;
+}
+.all-container .all-list{
+    overflow-x: auto;
+    overflow-y: visible;
+    display: flex;
+    height: 240px;
+    
+}
+.all-list .item-list:last-child{
+    margin-right: 0;
+}
+
+.favourites-container{
+    padding: 20px;
+}
+.favourites-container h3{
+    font-size: 23px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #000;
+}
+.favourites-container .favourites-list{
+    overflow-x: auto;
+    overflow-y: visible;
+    display: flex;
+    height: 240px;
+    
+}
+.favourites-list .item-list:last-child{
+    margin-right: 0;
+}
+
+.mostPlayed-container{
+    padding: 20px;
+}
+.mostPlayed-container h3{
+    font-size: 23px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #000;
+}
+.mostPlayed-container .mostPlayed-list{
+    overflow-x: auto;
+    overflow-y: visible;
+    display: flex;
+    height: 240px;
+}
+.mostPlayed-list .item-list:last-child{
+    margin-right: 0;
+}
+
+.item-list {
+    color: #fff;
+    z-index: 0;
+    position: relative;
+    width: 180px;
+    height: 220px;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.5);
+    min-width: 180px;
+    margin-right: 18px;
+    box-sizing: content-box;
+}
+.item-list::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, transparent, transparent, rgba(0, 0, 0, 0.705));
+    z-index: 10;
+    transition: .5s;
+    opacity: 1;
+    transition: all .3s ease;
+}
+.item-list:hover::before {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.705), transparent, rgba(0, 0, 0, 0.705));
+}
+.item-list:hover .textPlay,
+.item-list:hover .textLike{
+    opacity: 1;
+}
+.item-list img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.item-list .item-textContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    z-index: 20;
+}
+.item-textContainer .textName {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textName label {
+    text-align: center;
+}
+.item-textContainer .textPlay {
+    flex-grow: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all .3s ease;
+}
+.textPlay button{
+    font-size: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+}
+.item-textContainer .textLike {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    opacity: 0;
+    transition: all .3s ease;
+}
+.textLike button{
+    font-size: 20px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+}
+/*----------------------Start MisListas--------------------------*/
+.container-misListas{
+    display: none;
+    padding: 20px;
+    background: #fff;
+}
+.container-addList{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.container-addList .addList{
+    border: none;
+    outline: none;
+    font-size: 25px;
+    font-family: 'Handlee', cursive;
+    font-weight: 600;
+    cursor: pointer;
+    background: #fff;
+}
+.addList:hover {
+    text-decoration: underline;
+}
+/* .misListas {
+    
+} */
+.misListas .lista {
+    padding-bottom: 15px;
+    background: #fff;
+    margin-bottom: 20px;
+    border-top: 3px solid #1d1d1d;
+}
+/* .misListas .lista .lista-head {
+    
+} */
+.lista-head input {
+    font-size: 25px;
+    border: none;
+    padding: 8px 8px;
+    width: auto;
+    width: 200px;
+    color: #000;
+    font-family: 'Handlee', cursive;
+    font-weight: 600;
+    background: #fff;
+}
+/* .contenedorListasCreadas {
+} */
+.lista-head-others{
+    display: flex;
+    justify-content: space-between;
+}
+.lista-head-others .lista-head-left input {
+    font-size: 25px;
+    border: none;
+    padding: 8px 8px;
+    width: auto;
+    width: 200px;
+    color: #000;
+    font-family: 'Handlee', cursive;
+    font-weight: 600;
+    background: #fff;
+}
+.lista-head-others .lista-head-left .cambiarNombre {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Handlee', cursive;
+    background: #1d1d1d;
+    padding: 5px 8px;
+    color: #fff;
+    margin: 0 5px;
+    border-radius: 10px;
+}
+.lista-head-others .lista-head-left .guardarNombre {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Handlee', cursive;
+    background: #95b602;
+    padding: 5px 8px;
+    color: #fff;
+    margin: 0 5px;
+    border-radius: 10px;
+    display: none;
+}
+.lista-head-others .lista-head-left .cancelarNombre {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Handlee', cursive;
+    background: #db1111;
+    padding: 5px 8px;
+    color: #fff;
+    margin: 0 5px;
+    border-radius: 10px;
+    display: none;
+}
+.lista-head-others .lista-head-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+.lista-head-others .lista-head-right i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.lista-body{
+    display: flex;
+    flex-wrap: wrap;
+}
+.item-misListas {
+    display: flex;
+    height: 80px;
+    width: 320px;
+    background: #292929;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-right: 50px;
+}
+.item-misListas .item-mislistas-img{
+    width: 80px;
+    background: #000;
+    color: #fff;
+    position: relative;
+    z-index: 0;
+}
+.item-mislistas-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.item-mislistas-img .iconPlay {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconPlay i{
+    font-size: 25px;
+    cursor: pointer;
+}
+.item-mislistas-txt {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    padding-left: 10px;
+    color: #fff;
+    padding-top: 5px;
+}
+.item-mislistas-txt label {
+    height: 42px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.item-mislistas-txt i {
+    margin-top: 5px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+.item-mislistas-close {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.item-mislistas-close i {
+    cursor: pointer;
+    font-size: 22px;
+    color: #fff;
+    margin: 2px;
+}
+.item-mostrarMas {
+    width: 80px;
+    height: 80px;
+}
+.mostrarMas {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 8px;
+    flex-direction: column;
+    color: #fff;
+    background: #292929;
+}
+.mostrarMas i {
+    font-size: 25px;
+    flex-grow: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+}
+.mostrarMas label {
+
+    font-weight: 600;
+    text-align: center;
+    flex-grow: 1;
+}
+.mostrarMas i:hover ~ label {
+    text-decoration: underline;
+}
+
+/*------------------------Start Explorar-----------------------------*/
+.container-explorar{
+    display: none;
+}
+.explorar-head {
+    display: flex;
+    margin-top: 15px;
+}
+.mensaje-explorar{
+    padding: 20px;
+}
+.mensaje-explorar label {
+    font-size: 25px;
+    letter-spacing: 4px;
+}
+.search-explorar {
+    display: flex;
+    padding: 0 20px;
+}
+.search-explorar .container-input {
+    width: 400px;
+    display: flex;
+    align-items: center;
+}
+.container-input .input {
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+.input input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid silver;
+    font-size: 22px;
+    font-family: 'Handlee', cursive;
+    outline: none;
+}
+.input input:focus ~ label,
+.input input:valid ~ label {
+    transform: translateY(-32px);
+    font-size: 18px;
+    font-weight: 600;
+    color: #95b602;
+}
+.input label {
+    position: absolute;
+    font-size: 22px;
+    left: 0;
+    color: #949494;
+    pointer-events: none;
+    bottom: 6px;
+    transition: all .3s ease;
+}
+.input .underline {
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+}
+.input .underline::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: #95b602;
+    transform: scaleX(0);
+    transition: all .3s ease;
+}
+.input input:focus ~ .underline::before,
+.input input:valid ~ .underline::before {
+    transform: scaleX(1)
+}
+.search-explorar .container-btnExplorar {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-btnExplorar button {
+    font-size: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    background: #fff;
+}
+.container-btnExplorar button:hover {
+    transform: scale(1.2);
+    color: #95b602;
+}
+.explorar-body{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-between;
+}
+.item-explorar {
+    display: flex;
+    height: 80px;
+    width: 360px;
+    background: #292929;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.item-explorar .item-explorar-img{
+    width: 80px;
+    background: #000;
+    color: #fff;
+    position: relative;
+    z-index: 0;
+    border-radius: 8px;
+}
+.item-explorar-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+}
+.item-explorar-img .iconPlay {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconPlay i{
+    font-size: 25px;
+    cursor: pointer;
+}
+.item-explorar-txt {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    padding-left: 10px;
+    color: #fff;
+    padding-top: 5px;
+}
+.item-explorar-txt label {
+    height: 42px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.item-explorar-txt i {
+    margin-top: 5px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+.item-explorar-add {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.item-explorar-add i {
+    cursor: pointer;
+    font-size: 22px;
+    color: #fff;
+}
+/*---------------------Anuncio Mensaje--------------------*/
+.anuncio {
+    position: fixed;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    height: 100%;
+    align-items: flex-end;
+    z-index: 100;
+    pointer-events: none;
+}
+.msg {
+    position: fixed;
+    font-size: 20px;
+    background: #95b602;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+/*-----------------------------ModalFORM-------------------------*/
+.formNewList {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    z-index: 50;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.formNewList form {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+.formNewList form .cerrarForm {
+    display: flex;
+    justify-content: flex-end;
+}
+.cerrarForm i {
+    font-size: 30px;
+    cursor: pointer;
+}
+.formNewList form .formTitle {
+    font-size: 38px;
+    text-align: center;
+}
+.formNewList form .nameList {
+    font-size: 22px;
+    font-family: 'Handlee', cursive;
+    border: none;
+    outline: none;
+    margin: 10px 0;
+}
+.formNewList form .nameList:focus,
+.formNewList form .nameList:valid {
+    border-bottom: 2px solid #95b602;
+}
+.formNewList form .musicListToAdd {
+    margin: 10px 0;
+    height: 300px;
+    overflow-y: auto;
+}
+.musicListToAdd .itemToAdd {
+    margin: 8px 0;
+    display: flex;
+    background-color: #fff;
+}
+.itemToAdd label {
+    width: 400px;
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+    height: 100%;
+}
+.itemToAdd i {
+    font-size: 18px;
+    padding: 0 15px;
+    display: none;
+}
+.formNewList form .button{
+    display: flex;
+    justify-content: center;
+}
+.formNewList form .button button{
+    width: 200px;
+    font-family: 'Handlee', cursive;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #95b602;
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+/*----------------------MODAL ADDListMusic------------------*/
+.formAddList {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    z-index: 50;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.formAddList-form {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+.formAddList-form .formAddList-add {
+    font-size: 28px;
+}
+.formAddList-form .listToAddMusic {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    font-size: 22px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+.formAddList-form .listToAddMusic .item-listToAddMusic {
+    padding: 5px 10px;
+}
+.formAddList-form .formAddList-btns {
+    display: flex;
+    justify-content: space-evenly;
+}
+.formAddList-btns .btn-agregarALista{
+    border: none;
+    font-family: 'Handlee', cursive;
+    outline: none;
+    background: #95b602;
+    font-size: 22px;
+    padding: 10px;
+    color: #fff;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.formAddList-btns .btn-cancelarALista{
+    border: none;
+    font-family: 'Handlee', cursive;
+    outline: none;
+    background: #db1111;
+    font-size: 22px;
+    padding: 10px;
+    color: #fff;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/*-------------------------Yes OR No---------------------------*/
+.yesOrNo{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    z-index: 55;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modalYesOrNo {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+.modalYesOrNo #msgYesOrNo{
+    font-size: 35px;
+}
+.modalYesOrNo .btns-yesOrNo {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.btns-yesOrNo #btn-Yes {
+    font-size: 25px;
+    font-family: 'Handlee', cursive;
+    padding: 5px 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #95b602;
+    font-weight: 600;
+}
+.btns-yesOrNo #btn-No {
+    font-size: 25px;
+    font-family: 'Handlee', cursive;
+    padding: 5px 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #fc3535;
+    font-weight: 600;
+}

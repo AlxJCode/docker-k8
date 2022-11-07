@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: music-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: music-app
+  template:
+    metadata:
+      labels:
+        app: music-app
+    spec:
+      containers:
+        - name: frontend-container
+          image: localhost:5000/appm-ms
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 4000

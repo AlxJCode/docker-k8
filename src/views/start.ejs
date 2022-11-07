@@ -1,0 +1,139 @@
+<%- include('partials/header.ejs') %>
+
+<div class="start-container">
+    <div class="start">
+        <div class="anuncio">
+            <div class="msg">
+                Se agregó la música
+            </div>
+        </div>
+        <div class="yesOrNo">
+            <div class="modalYesOrNo">
+                <input type="hidden" id="valorYesOrNo">
+                <label id="msgYesOrNo">¿Seguro de querer borrarlo?</label>
+                <div class="btns-yesOrNo">
+                    <button id="btn-Yes">Si</button>
+                    <button id='btn-No'>No</button>
+                </div>
+            </div>
+        </div>
+        <div class="formNewList">
+            <form action="/newList">
+                <div class="cerrarForm">
+                    <i class="fas fa-times" id="cerrarForm"></i>
+                </div>
+                <label class="formTitle">Nueva Lista</label>
+                <input class="nameList" type="text" placeholder="Name" required>
+                <div class="musicListToAdd" id="musicListToAdd">
+                </div>
+                <div class="button">
+                    <button type="submit" id="btn-form">Crear</button>
+                </div>
+            </form>
+        </div>
+        <div class="formAddList">
+            <div class="formAddList-form">
+                <label class="formAddList-add">Agregar a: </label>
+                <div class="listToAddMusic">
+                </div>
+                <div class="formAddList-btns">
+                    <button class="btn-agregarALista">Agregar</button>
+                    <button class="btn-cancelarALista">Cancelar</button>
+                </div>
+            </div>
+        </div>
+        <div class="start-title">
+            <div class="title">
+                <h1>My PlayList</h1>
+            </div>
+        </div>
+        <div class="start-video">
+            <div class="marco-video">
+                <div class="gif">
+                    <img src="/imgs/giphy.gif" alt="">
+                    <img src="/imgs/source.gif" alt="">
+                </div>
+                <div class="videoYoutube">
+                </div>
+            </div>
+        </div>
+        <div class="start-controls">
+            <div class="controls-barras">
+                <button id="btn-inicio" class="btn-barras btn-selected">Inicio</button>
+                <button id="btn-misListas" class="btn-barras">Mis listas</button>
+                <button id="btn-explorar" class="btn-barras">Explorar</button>
+            </div>
+            <div class="controls-main">
+                <div class="container-inicio">
+                    <div class="all-container">
+                        <h3>Todas</h3>
+                        <div class="all-list">
+                    
+                        </div>
+                    </div>
+                    <div class="favourites-container">
+                        <h3>Mis favoritas</h3>
+                        <div class="favourites-list">
+                        </div>
+                    </div>
+                    <div class="mostPlayed-container">
+                        <h3>Más escuchadas</h3>
+                        <div class="mostPlayed-list">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="container-misListas">
+                    <div class="container-addList">
+                        <button class="addList">
+                            <i class="fas fa-plus"></i>
+                            Agregar nueva lista
+                        </button>
+                    </div>
+                    <div class="misListas">
+                        <div class="lista">
+                            <div class="lista-head">
+                                <input type="text" value="Todas" disabled>
+                            </div>
+                            <div class="lista-body AllmusicMyLists">
+                            </div>
+                        </div>
+                        <div class="lista">
+                            <div class="lista-head">
+                                <input type="text" value="Favoritas" disabled>
+                            </div>
+                            <div class="lista-body AllFavouritesMusicsMyLists">
+                            </div>
+                        </div>
+                        <div class="contenedorListasCreadas">
+                        </div>
+                    </div>
+                </div>
+                <div class="container-explorar">
+                    <div class="explorar-head">
+                        <div class="search-explorar">
+                            <div class="container-input">
+                                <div class="input">
+                                    <input type="text" required id="input-searchMusic">
+                                    <div class="underline"></div>
+                                    <label>Buscar</label>
+                                </div>
+                            </div>
+                            <div class="container-btnExplorar">
+                                <button id="btn-searchMusic"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="mensaje-explorar">
+                            <label>!Hola Alex, busquemos músicas! <i class="far fa-laugh-wink"></i></label>
+                        </div>
+                    </div>
+                    <div class="explorar-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include('partials/footer.ejs') %>
